@@ -6,6 +6,7 @@
 
 import os
 import shutil
+import sys
 import hashlib
 import zipfile
 from xml.etree import ElementTree
@@ -26,16 +27,16 @@ IGNORE = [
 def _setup_colors():
     color = 0
     console = 0
-    try:
+    if sys.platform in ["linux", "linux2"]:
         color = os.system("color")
-    except:
-        pass
-    
-    if os.name == 'nt':  # Only if we are running on Windows
+    elif sys.platform == "win32":  # Only if we are running on Windows
         from ctypes import windll
 
         k = windll.kernel32
         console = k.SetConsoleMode(k.GetStdHandle(-11), 7)
+    elif sys.platform == "darwin":
+    	pass
+
     return color == 1 or console == 1
 
 
