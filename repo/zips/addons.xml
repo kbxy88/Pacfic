@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="plugin.program.Voltage" name="[COLOR limegreen]Open[/COLOR]Voltage" version="1.4.9" provider-name="kbxy88">
+<addons><addon id="plugin.program.Voltage" name="[COLOR limegreen]Open[/COLOR]Voltage" version="1.5.0" provider-name="kbxy88">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
